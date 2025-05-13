@@ -62,16 +62,6 @@ That's it! You can start adding your project items or import the sample data to 
 *   CSS3
 *   Vanilla JavaScript (ES6+)
 
-## Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/YOUR_USERNAME/ml-project-hill-chart/issues) (replace with your actual link after creating the repo).
-
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
-
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
@@ -80,20 +70,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 *   The Hill Chart concept was popularized by [Basecamp](https://basecamp.com/features/hill-charts).
 *   Icons used are standard Unicode characters.
-
----
-
-**Before you commit this:**
-
-1.  **Replace `YOUR_USERNAME/ml-project-hill-chart`** in the "Contributing" section link with your actual GitHub username and repository name.
-2.  **Consider adding a screenshot/GIF:** Visuals make a README much more engaging. You can create a subfolder (e.g., `docs/` or `assets/`) in your repository to store images and then link to them like this:
-    ```markdown
-    <p align="center">
-      <img src="docs/screenshot.png" alt="ML Project Hill Chart Screenshot" width="700">
-    </p>
-    ```
-    (Adjust path and width as needed).
-3.  **Review for accuracy:** Make sure all descriptions match your tool's actual functionality.
-4.  **Check formatting:** Markdown can be tricky. Preview it on GitHub after committing to ensure it looks good.
-
-This README provides a comprehensive overview for potential users and contributors!
