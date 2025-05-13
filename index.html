@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Hill Chart (AI/ML Project Phases)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <div id="leftInfoPanel" class="info-panel">
+            <button id="panelToggleBtn" class="panel-toggle-btn">«</button>
+            <h2>Sample Project Slices (AI Trading Platform)</h2>
+            <p>This sample project is broken down into manageable "vertical slices" and enabling infrastructure tasks. Each slice aims to deliver a learning or a piece of testable functionality by moving through the Hill Chart zones (aligned with CRISP-DM phases).</p>
+            <div id="projectSlicesList">
+                <div class="slice-item">
+                    <h4>Slice 1: Basic Momentum Signal (PoC)</h4>
+                    <p><strong>Goal:</strong> Test simple 50-day MA crossover on AAPL. Target >52% accuracy.
+                    <br><em>(Corresponds to dot 'VS001')</em></p>
+                </div>
+                <div class="slice-item">
+                    <h4>Slice 2: Volatility Filter for Slice 1</h4>
+                    <p><strong>Goal:</strong> Improve Slice 1's risk-adjusted return on AAPL by adding an ATR filter.
+                    <br><em>(Corresponds to dot 'VS002')</em></p>
+                </div>
+                <div class="slice-item">
+                    <h4>Core Backtesting Engine Enhancements</h4>
+                    <p><strong>Goal:</strong> Implement realistic commission & slippage models.
+                    <br><em>(Corresponds to dot 'INFRA001')</em></p>
+                </div>
+                <div class="slice-item">
+                    <h4>Data Pipeline: Real-time Quotes (IBKR)</h4>
+                    <p><strong>Goal:</strong> Ingest L1 real-time NASDAQ quotes via Interactive Brokers API.
+                    <br><em>(Corresponds to dot 'DATA001')</em></p>
+                </div>
+                 <div class="slice-item">
+                    <h4>Explore LSTM Model (Top 5 Stocks)</h4>
+                    <p><strong>Goal:</strong> Investigate if LSTM can outperform MA crossover for 1-day price prediction.
+                    <br><em>(Corresponds to dot 'MLMODEL001')</em></p>
+                </div>
+                 <div class="slice-item">
+                    <h4>Market Regime Detection Research</h4>
+                    <p><strong>Goal:</strong> Explore methods to identify market regimes to inform strategy switching.
+                    <br><em>(Corresponds to dot 'RESEARCH001')</em></p>
+                </div>
+                 <div class="slice-item">
+                    <h4>MLOps - Initial Pipeline Design</h4>
+                    <p><strong>Goal:</strong> Outline the initial design for model training, versioning, deployment, and monitoring pipeline.
+                    <br><em>(Corresponds to dot with similar name in sample data, if added)</em></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="container">
+                <h1>Project Hill Chart: AI & ML Platform <button id="panelToggleBtnMain" class="panel-toggle-btn main-toggle">»</button></h1>
+                
+                <div class="hill-chart-controls">
+                    <input type="text" id="newItemName" placeholder="New Item Name">
+                    <button id="addItemBtn">Add Item</button>
+                    <button id="importSampleDataBtn" title="Imports AI Trading sample data (will overwrite existing)">Import Sample Project</button>
+                </div>
+
+                <div class="hill-chart-container">
+                    <svg id="hillSvg" viewBox="0 0 800 300" preserveAspectRatio="xMidYMid meet">
+                        <defs> <linearGradient id="zone1Gradient" x1="0%" y1="0%" x2="0%" y2="100%"> <stop offset="0%" style="stop-color:#e0eafc;stop-opacity:0.5" /> <stop offset="100%" style="stop-color:#cfdef3;stop-opacity:0.7" /> </linearGradient> <linearGradient id="zone2Gradient" x1="0%" y1="0%" x2="0%" y2="100%"> <stop offset="0%" style="stop-color:#d8e6f3;stop-opacity:0.5" /> <stop offset="100%" style="stop-color:#c4d7e9;stop-opacity:0.7" /> </linearGradient> <linearGradient id="zone3Gradient" x1="0%" y1="0%" x2="0%" y2="100%"> <stop offset="0%" style="stop-color:#cce0f5;stop-opacity:0.5" /> <stop offset="100%" style="stop-color:#b3cde8;stop-opacity:0.7" /> </linearGradient> <linearGradient id="zone4Gradient" x1="0%" y1="0%" x2="0%" y2="100%"> <stop offset="0%" style="stop-color:#d8e6f3;stop-opacity:0.5" /> <stop offset="100%" style="stop-color:#c4d7e9;stop-opacity:0.7" /> </linearGradient> <linearGradient id="zone5Gradient" x1="0%" y1="0%" x2="0%" y2="100%"> <stop offset="0%" style="stop-color:#e0eafc;stop-opacity:0.5" /> <stop offset="100%" style="stop-color:#cfdef3;stop-opacity:0.7" /> </linearGradient> </defs>
+                        <rect x="0" y="0" width="170" height="300" fill="url(#zone1Gradient)" />
+                        <rect x="170" y="0" width="160" height="300" fill="url(#zone2Gradient)" />
+                        <rect x="330" y="0" width="140" height="300" fill="url(#zone3Gradient)" />
+                        <rect x="470" y="0" width="160" height="300" fill="url(#zone4Gradient)" />
+                        <rect x="630" y="0" width="170" height="300" fill="url(#zone5Gradient)" />
+                        <path d="M 50 250 Q 250 50 400 50 T 750 250" stroke="#aab8c2" stroke-width="8" fill="none" class="hill-path-shadow"/>
+                        <path d="M 50 250 Q 250 50 400 50 T 750 250" stroke="#ffffff" stroke-width="5" fill="none" />
+                        <g class="zone-cue" data-zone="1"> <text x="85"  y="285" class="hill-zone-label" text-anchor="middle">Business & Data Understanding</text> </g>
+                        <g class="zone-cue" data-zone="2"> <text x="250" y="285"  class="hill-zone-label" text-anchor="middle">Data Prep & Feature Prototyping</text> </g>
+                        <g class="zone-cue" data-zone="3"> <text x="400" y="285"  class="hill-zone-label" text-anchor="middle">Modeling & Initial Evaluation</text> </g>
+                        <g class="zone-cue" data-zone="4"> <text x="550" y="285"  class="hill-zone-label" text-anchor="middle">Business Eval & Refinement</text> </g>
+                        <g class="zone-cue" data-zone="5"> <text x="715" y="285" class="hill-zone-label" text-anchor="middle">Deployment & Project Review</text> </g>
+                        <line x1="170" y1="0" x2="170" y2="300" stroke-dasharray="5,5" stroke="rgba(0,0,0,0.2)" /> <line x1="330" y1="0" x2="330" y2="300" stroke-dasharray="5,5" stroke="rgba(0,0,0,0.2)" /> <line x1="470" y1="0" x2="470" y2="300" stroke-dasharray="5,5" stroke="rgba(0,0,0,0.2)" /> <line x1="630" y1="0" x2="630" y2="300" stroke-dasharray="5,5" stroke="rgba(0,0,0,0.2)" />
+                    </svg>
+                    <div id="dotsContainer"></div>
+                </div>
+
+                <div class="item-details">
+                     <h2>Item Details</h2> <div class="item-title-editor"> <span id="selectedItemNameDisplay">Select an item to see details.</span> <input type="text" id="editItemNameInput" class="hidden-input" /> <button id="editItemNameBtn" class="icon-btn" title="Edit Item Name" disabled>✎</button> <button id="saveItemNameBtn" class="icon-btn hidden-input" title="Save Name">✓</button> </div> <textarea id="itemComment" placeholder="Add a comment about progress or why it's in this zone..."></textarea> <div class="item-detail-buttons"> <button id="updateCommentBtn" disabled>Update Comment</button> <button id="deleteItemBtn" disabled class="danger-btn">Delete Item</button> </div> <div id="itemHistory"> <h3>Progress History:</h3> <ul></ul> </div>
+                </div>
+            </div> 
+        </div> 
+    </div> 
+
+    <div id="zoneInfoModal" class="modal">
+         <div class="modal-content"> <span class="close-modal-btn">×</span> <h2 id="modalZoneName">Zone Name</h2> <p id="modalZoneDescription">Zone description goes here.</p> <h3>Key Activities & "Done" Criteria:</h3> <ul id="modalZoneChecklist" class="checklist"> </ul> </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
