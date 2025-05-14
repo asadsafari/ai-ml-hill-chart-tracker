@@ -4,7 +4,7 @@ An interactive Hill Chart visualizer for tracking progress and uncertainty in AI
 
 Built with vanilla JavaScript, HTML, and CSS – no external frameworks required.
 
-<!-- Example: <p align="center"><img src="docs/screenshot.png" alt="ML Project Hill Chart Screenshot" width="700"></p> -->
+<p align="center"><img src="Screenshot 2025-05-13 at 19.19.24.png" alt="ML Project Hill Chart Screenshot" width="700"></p> 
 
 ## The Challenge with ML Project Timelines
 
