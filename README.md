@@ -6,6 +6,12 @@ Built with vanilla JavaScript, HTML, and CSS – no external frameworks required
 
 <p align="center"><img src="Screenshot 2025-05-13 at 19.19.24.png" alt="ML Project Hill Chart Screenshot" width="700"></p> 
 
+## Demo
+Want to try it yourself?
+
+Head over to: 
+https://asadsafari.github.io/ai-ml-hill-chart-tracker/ 🖱️
+
 ## The Challenge with ML Project Timelines
 
 Estimating and communicating timelines for Machine Learning projects can be notoriously difficult. Unlike traditional software development, ML projects often involve significant R&D, data exploration, and iterative modeling where outcomes are not always predictable. This tool aims to provide a more nuanced way to track progress beyond simple task lists or Gantt charts.
